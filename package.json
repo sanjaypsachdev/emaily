@@ -7,6 +7,10 @@
   "dependencies": {
     "express": "^4.17.1"
   },
+  "workspaces": [
+    "client"
+  ],
+  "private": true,
   "engines": {
     "node": "^15.1.0",
     "yarn": "1.x"
