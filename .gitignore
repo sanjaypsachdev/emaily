@@ -8,3 +8,5 @@ node_modules
 !.yarn/versions
 
 config/dev.js
+
+package-lock.json
