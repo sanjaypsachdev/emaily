@@ -1,2 +1,2 @@
 # Emaily
-React &amp; Node based project for sending promotion emails to potential clients.
+React &amp; Easily send promotion / marketing emails to multiple potential clients.
