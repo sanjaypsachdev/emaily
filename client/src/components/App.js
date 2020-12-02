@@ -12,7 +12,6 @@ const SurveyNew = () => <h2>SurveyNew</h2>
 const App = ({fetchUser}) => {
 
   useEffect(() => {
-    console.log('useEffect')
     fetchUser()
   }, [fetchUser])
 
