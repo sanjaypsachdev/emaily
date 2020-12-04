@@ -11,4 +11,4 @@ config/dev.js
 
 package-lock.json
 
-.env.*
+.env.development
