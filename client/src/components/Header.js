@@ -1,10 +1,12 @@
 import React from 'react'
-import { connect } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 import Payments from './Payments'
 
-const Header = ({ auth }) => {
+const Header = () => {
+
+  const auth = useSelector(state => state.auth)
 
   const returnContent = () => {
     switch (auth) {
@@ -41,8 +43,4 @@ const Header = ({ auth }) => {
   )
 }
 
-const mapStateToProps = ({ auth }) => {
-  return { auth }
-}
-
-export default connect(mapStateToProps)(Header)
+export default Header
