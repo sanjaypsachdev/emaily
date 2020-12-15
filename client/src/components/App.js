@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import * as actions from '../actions'
+import { fetchUser } from '../actions'
 
 import Header from './Header'
 import Landing from './Landing'
@@ -13,7 +13,7 @@ const App = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(actions.fetchUser())
+    dispatch(fetchUser())
   }, [dispatch])
 
   return (
