@@ -1,6 +1,6 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { useHistory } from 'react-router-dom'
 import formFields from './formFields'
 import { submitSurvey } from '../../actions'
 
@@ -9,6 +9,8 @@ const SurveyFormReview = ({ onCancel }) => {
   const formValues = useSelector(state => state.form.surveyForm.values)
 
   const dispatch = useDispatch()
+
+  let history = useHistory();
 
   const reviewFields = formFields.map(({ name, label }) => (
     <div key={name}>
@@ -33,7 +35,7 @@ const SurveyFormReview = ({ onCancel }) => {
       </button>
       <button
         className="green btn-flat right white-text"
-        onClick={() => dispatch(submitSurvey(formValues))}
+        onClick={() => dispatch(submitSurvey(formValues, history))}
       >
         Send Survey
         <i className="material-icons right">email</i>
