@@ -84,7 +84,8 @@ module.exports = app => {
   
       res.send(user);
     } catch (err) {
-      res.send(422).send(err);
+      res.status(422);
+      res.send(err);
     }
   });
 };
